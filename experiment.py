@@ -5,8 +5,8 @@ from sklearn.linear_model import LinearRegression
 
 
 def regressions(independent, dependent):
-    vaccine_data = pd.read_csv("C:/Users/physi/Documents/vaccine_dataset.csv")
-    misinfo_data = pd.read_csv("C:/Users/physi/Documents/cleaned_covaxxy2.csv")
+    vaccine_data = pd.read_csv("place_holder.csv")
+    misinfo_data = pd.read_csv("place_holder.csv")
 
     # finds appropriate dataset for dependent variable key
     if dependent in misinfo_data.keys():
