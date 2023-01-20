@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 import warnings
 
 
-def general_multi_regression(infile, attribute_list, response, outfile="regression_coefficients_gen.csv",
+def general_multi_regression(infile, attribute_list, response, outfile="place_holder.csv",
                              train_pct=0.9, alph=0.1, show_plot=True, covax=True):
     # this code produces some warnings from Pandas about assignment. In the future I would like to rectify
     # these, but for now we repress them along with divide-by-zero warnings when taking the logit
@@ -18,10 +18,10 @@ def general_multi_regression(infile, attribute_list, response, outfile="regressi
     warnings.simplefilter(action='ignore', category=Warning)
 
     # reads in the data
-    path_to = "C:/Users/physi/Documents/"
+    path_to = "place_holder"
     df = pd.read_csv(path_to + infile)
 
-    # separates out interaction terms and solo terms from specified variables
+    # reads in intended independent variables, separates out interaction terms and solo terms from specified variables
     solo_attribute_list = []
     mult_attribute_list = []
     for variable in attribute_list:
