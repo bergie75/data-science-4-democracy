@@ -9,17 +9,17 @@ from sklearn.metrics import explained_variance_score
 import warnings
 
 
-def random_forest(infile, attribute_list, response, max_samp=0.3, outfile="forest_importances.csv",
+def random_forest(infile, attribute_list, response, max_samp=0.3, outfile="place_holder.csv",
                   train_pct=0.9, show_plot=True, covax=True):
     # this code produces some warnings from Pandas about assignment. In the future I would like to rectify
     # these, but for now we repress them along with divide-by-zero warnings when taking the logit
     # since later processing removes the undefined logits from the dataset
     warnings.simplefilter(action='ignore', category=Warning)
 
-    path_to = "C:/Users/physi/Documents/"
+    path_to = "place_holder"
     df = pd.read_csv(path_to + infile)
 
-    # separates out interaction terms and solo terms
+    # reads in intended independent variables, separates out interaction terms and solo terms
     solo_attribute_list = []
     mult_attribute_list = []
     for variable in attribute_list:
